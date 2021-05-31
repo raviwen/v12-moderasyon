@@ -17,7 +17,7 @@ module.exports.raviwen = async(client, message, args, config) => {
     const uye = message.mentions.members.first() || message.guild.members.cache.get(args[0])
     let taglıalım = await db.fetch(`taglıalım.${message.guild.id}`)
     if(taglıalım === true){
-        if(!uye.username.includes(Main.Tag) && !uye.roles.cache.has(raviwen.Roller.VIP) && !uye.roles.cache.has(raviwen.Roller.Booster)) return message.channel.send(yanlis.setDescription(`Sunucumuza şuan taglı alımdadır. Kişinin kayıt olabilmesi için 3 seçenek vardır ; \n 1- Sunucumuzun tagını alabilir. \n 2- Sunucuma boost basabilir. \n 3- Vip Rolü verilebilir.`)).then(x => x.delete({timeout: 5000}));
+        if(!uye.user.username.includes(Main.Tag) && !uye.roles.cache.has(raviwen.Roller.VIP) && !uye.roles.cache.has(raviwen.Roller.Booster)) return message.channel.send(yanlis.setDescription(`Sunucumuza şuan taglı alımdadır. Kişinin kayıt olabilmesi için 3 seçenek vardır ; \n 1- Sunucumuzun tagını alabilir. \n 2- Sunucuma boost basabilir. \n 3- Vip Rolü verilebilir.`)).then(x => x.delete({timeout: 5000}));
     }
     let Name = args[1]
     let Age = args[2]
