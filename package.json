@@ -1,0 +1,16 @@
+{
+  "name": "moderasyon",
+  "version": "1.0.0",
+  "description": "@raviwen",
+  "main": "strgv.js",
+  "scripts": {
+    "test": "node strgv.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "quick.db": "^7.1.3"
+  }
+}

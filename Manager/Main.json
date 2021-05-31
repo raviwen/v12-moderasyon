@@ -1,0 +1,11 @@
+{
+    "Token": "TOKEN",
+    "GuildID": "SUNUCUID",
+    "Prefix": ["."],
+    "Minyaş": "MİNİMUM YAŞ",
+    "BotVoice": "BOTSES",
+    "Status": "DURUM",
+    "Footer": "FOOTER",
+    "Tag": "TAG",
+    "UnTag": "UNTAG"
+}

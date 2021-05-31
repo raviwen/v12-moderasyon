@@ -1,0 +1,42 @@
+{
+    "Yetkili": {
+        "AbilityYT": "BÜTÜNKOMUTLARIKULLANAN",
+        "BanYT": "BANYETKİLİSİID",
+        "jailYT": "JAİLYETKİLİSİID",
+        "muteYT": "MUTEYETKİLİSİID",
+        "vmuteYT": "VMUTEYETKİLİSİID",
+        "registerYT": "REGİSTERYETKİLİSİID"
+    },
+    "Roller": {
+        "Jailed": "JAİLROL",
+        "Muted": "MUTEROL",
+        "VMuted": "VMUTEROL",
+        "Booster": "BOOSTERROL",
+        "VIP": "VIPROL"
+    },
+    "Register": {
+        "e1": "ERKEKROL1",
+        "e2": "ERKEKROL2",
+        "e3": "ERKEKROL3",
+        "k1": "KIZROL1",
+        "k2": "KIZROL2",
+        "k3": "KIZROL2",
+        "unreg": "KAYITSIZROL",
+        "süpheli": "SÜPHELİROL",
+        "TagRol": "TAGROL"
+    },
+    "Log": {
+        "HosgeldinKanal": "HGKANAL",
+        "TagLog": "TAGLOGKANAL",
+        "CezaPuanLog": "CEZAPUANKANAL",
+        "BanLog": "BANLOGKANAL",
+        "RegisterLog": "REGİSTERLOG",
+        "MuteLog": "MUTELOG",
+        "JailLog": "JAİLLOG",
+        "VMuteLog": "VMUTELOG"
+    },
+    "Diger": {
+        "raviyes": "ONAYEMOJİ",
+        "ravino":"REDEMOJİ"
+    }
+}
