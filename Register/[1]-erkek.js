@@ -15,7 +15,6 @@ module.exports.raviwen = async(client, message, args, config) => {
     //
     if(![raviwen.Yetkili.AbilityYT,raviwen.Yetkili.registerYT].some(role => message.member.roles.cache.get(role)) && !message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(yanlis.setDescription('Gerekli yetkilere sahip değilsin.'))
     const uye = message.mentions.members.first() || message.guild.members.cache.get(args[0])
-    let cpuan = db.get(`cezapuan.${uye.id}.${message.guild.id}`);
     let taglıalım = await db.fetch(`taglıalım.${message.guild.id}`)
     if(taglıalım === true){
         if(!uye.username.includes(Main.Tag) && !uye.roles.cache.has(raviwen.Roller.VIP) && !uye.roles.cache.has(raviwen.Roller.Booster)) return message.channel.send(yanlis.setDescription(`Sunucumuza şuan taglı alımdadır. Kişinin kayıt olabilmesi için 3 seçenek vardır ; \n 1- Sunucumuzun tagını alabilir. \n 2- Sunucuma boost basabilir. \n 3- Vip Rolü verilebilir.`)).then(x => x.delete({timeout: 5000}));
@@ -25,7 +24,7 @@ module.exports.raviwen = async(client, message, args, config) => {
     if(!uye) return message.channel.send(yanlis.setDescription('Bir kullanıcı belirtmelisin. <@Raviwen/ID>'))
     if(!Name || !Age ) return message.channel.send(yanlis.setDescription(`Yanlış kullanım. ${Main.Prefix}e <@Raviwen/ID> <İsim> <Yaş>`))
     if(Age < Main.Minyaş) return message.channel.send(yanlis.setDescription(`${Main.Minyaş} Yaşından küçük üyeler kayıt edilemez.`))
-    //let cpuan = db.get(`cezapuan.${uye.id}.${message.guild.id}`); // Datadan kişinin ceza puanını çeker.
+    let cpuan = db.get(`cezapuan.${uye.id}.${message.guild.id}`); // Datadan kişinin ceza puanını çeker.
     //if(cpuan > 80) return message.channel.send(yanlis.setDescription(`Kişinin Ceza Puanı: \`${cpuan}\` Olduğu için kayıt edilemiyor. `))  // Sayısı değiştirerek kayıt olmasını engelleyebilirsiniz. 
     if(uye.id === message.author.id) return message.channel.send(yanlis.setDescription('Kendinizi kayıt edemezsiniz.'))
     if(uye.id === message.guild.ownerID ) return message.channel.send(yanlis.setDescription('Sunucu sahibini kayıt edemezsin.'))
