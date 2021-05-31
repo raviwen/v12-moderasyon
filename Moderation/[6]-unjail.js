@@ -20,15 +20,14 @@ module.exports.raviwen = async(client, message, args, config) => {
     let sebep = args.splice(1).join(" ")
     if(!sebep) return message.channel.send(yanlis.setDescription('Bir sebep belirtmen gerekiyor.')).then(x => x.delete({timeout: 2000}))
     let cezalı = db.fetch(`cezalı.${uye.id}.${message.guild.id}`)
-    if(!cezalı) {
     if(cezalı == 'cezalı') {
-    db.delete(`cezalı.${uye.id}.${message.guild.id}`)
-    db.delete(`süre.${uye.id}.${message.guild.id}`)
+    await db.delete(`cezalı.${uye.id}.${message.guild.id}`)
+    await db.delete(`süre.${uye.id}.${message.guild.id}`)
     client.channels.cache.get(raviwen.Log.MuteLog).send(new MessageEmbed().setDescription(`${uye} Kişisinin mutesi ${message.author} Tarafından kaldırıldı.`))
     await uye.roles.remove(raviwen.Roller.Jailed)
     await uye.roles.add(raviwen.Register.unreg)
     message.channel.send(yanlis.setDescription(`Başarıyla ${uye} Adlı üyenin jail cezasını kaldırdınız.`)).then(x => x.delete({timeout: 2000}))
-    }} else {
+    } else {
         message.channel.send(yanlis.setDescription('Kişinin jail cezası bulunmuyor.')).then(x => x.delete({timeout: 2000}))
     }
 };
