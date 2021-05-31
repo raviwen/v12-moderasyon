@@ -36,7 +36,7 @@ module.exports.raviwen = async(client, message, args, config) => {
 
     const CezaLog = new MessageEmbed()
     .setFooter(Main.Footer)
-    .setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
+    .setAuthor(message.author.name, message.author.avatarURL({dynamic: true}))
     .setColor('RANDOM')
     .setDescription(`
     \`Üye sunucudan yasaklandı.\` \n\n
