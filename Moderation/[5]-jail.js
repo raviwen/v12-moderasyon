@@ -50,7 +50,7 @@ module.exports.raviwen = async(client, message, args, config) => {
     await uye.roles.cache.has(raviwen.Roller.Booster) ? uye.roles.set([raviwen.Roller.Booster, raviwen.Roller.Jailed]) : uye.roles.set([raviwen.Roller.Jailed])
     let baban = new MessageEmbed()
     .setAuthor(message.guild.name, message.guild.iconURL({dynamic:true}))
-    .setFooter(`${uye.tag} Adlı üyenin toplam ${cpuan} Bulunuyor.`)
+    .setFooter(`${uye.user.username} Adlı üyenin toplam ${cpuan} Bulunuyor.`)
     .setThumbnail(message.guild.iconURL({dyanmic:true}))
     .setTitle(`Bir üye cezalandırıldı..`)
     .setDescription(`
