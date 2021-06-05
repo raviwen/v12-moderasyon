@@ -5,3 +5,7 @@ Fix moderasyon işte fazla komut yok ama reg + mod birleşik indirip test edebil
 Destek için sunucuma gelebilirsiniz gencoler ; 
 
 discord.gg/3MdKxbncsr
+
+
+
+İZİNSİZ ALIP DEĞİŞTİRİP BENİM DİYE DOLAŞMAZSANIZ SEVİNİRİM. 
