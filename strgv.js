@@ -155,7 +155,7 @@ client.on('guildMemberAdd', async (member) => {
     await member.roles.add(raviwen.Roller.VMuted)
 
     setTimeout(async () => {
-      client.channels.cache.get(raviwen.Log.MuteLog).send(new MessageEmbed().setDescription(`${member} Yazılı kanallardan susturması sona erdi. Muhabbet etmeye devam edebilir.`))
+      client.channels.cache.get(raviwen.Log.MuteLog).send(new Discord.MessageEmbed().setDescription(`${member} Yazılı kanallardan susturması sona erdi. Muhabbet etmeye devam edebilir.`))
       await db.delete(`vmuteli.${member.id}.${member.guild.id}`)
       await db.delete(`süre.${member.id}.${member.author.id}`)
       await member.roles.remove(raviwen.Roller.VMuted)
