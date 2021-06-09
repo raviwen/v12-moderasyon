@@ -52,7 +52,7 @@ fs.readdir('./Moderation', (err, files) => {
     let load = client.commands.get(command) || client.commands.get(client.aliases.get(command));
     
     if (load){
-     if (!message.member.hasPermission(8) && client.cooldown.has(message.author.id)) return message.channel.send(new MessageEmbed().setDescription('**5** Saniyede bir komut kullanabilirsin.').setFooter(Main.Footer).setColor('RANDOM').setTimestamp());
+     if (!message.member.hasPermission(8) && client.cooldown.has(message.author.id)) return message.channel.send(new Discord.MessageEmbed().setDescription('**5** Saniyede bir komut kullanabilirsin.').setFooter(Main.Footer).setColor('RANDOM').setTimestamp());
       client.cooldown.add(message.author.id);
       setTimeout(() => client.cooldown.delete(message.author.id), 5000);
       load.raviwen(client, message, args);
